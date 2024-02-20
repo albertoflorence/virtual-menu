@@ -1,8 +1,8 @@
-package com.example.trybevirtualmenu.views
+package com.example.trybevirtualmenu.models
 
 data class MenuData(
     val name: String,
-    val image: String,
+    val image: Int,
     val description: String,
     val price: Double
 )

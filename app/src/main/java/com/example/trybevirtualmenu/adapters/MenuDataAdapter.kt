@@ -1,19 +1,20 @@
-package com.example.trybevirtualmenu.views
+package com.example.trybevirtualmenu.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.
+import com.example.trybevirtualmenu.R
+import com.example.trybevirtualmenu.models.MenuData
+
 class MenuDataAdapter (private val menuList: List<MenuData> ) : Adapter<MenuDataAdapter.MenuViewHolder>(){
 
     class MenuViewHolder(view: View): ViewHolder(view) {
         val name: TextView = view.findViewById(R.id.item_menu_name)
-        val image: TextView = view.findViewById(R.id.item_menu_image)
-        val description: TextView = view.findViewById(R.id.item_menu_description)
-        val price: TextView = view.findViewById(R.id.item_menu_price)
+        val image: ImageView = view.findViewById(R.id.item_menu_image)
     }
 
     override fun getItemCount(): Int = menuList.size
@@ -25,9 +26,7 @@ class MenuDataAdapter (private val menuList: List<MenuData> ) : Adapter<MenuData
 
     override fun onBindViewHolder(holder: MenuViewHolder, position: Int) {
         holder.name.text = menuList[position].name
-        holder.image.text = menuList[position].image
-        holder.description.text = menuList[position].description
-        holder.price.text = menuList[position].price.toString()
+        holder.image.setImageResource(menuList[position].image)
     }
 
 }
