@@ -1,6 +1,7 @@
 package com.example.trybevirtualmenu.models
 
 data class MenuData(
+    val id: Int,
     val name: String,
     val image: Int,
     val description: String,
