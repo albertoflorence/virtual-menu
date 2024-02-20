@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     private val mMenuList: RecyclerView by lazy { findViewById(R.id.main_menu)}
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
